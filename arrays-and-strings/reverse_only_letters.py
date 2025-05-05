@@ -1,5 +1,5 @@
 """
-Problem 917: Reverse Only Letters
+Leetcode Problem 917: Reverse Only Letters
 
 Given a string s, reverse the string according to the following rules:
 - All the characters that are not English letters remain in the same position.
@@ -49,4 +49,23 @@ def main():
     # Test case 2
     s2 = "a-bC-dEf-ghIj"
     expected2 = "j-Ih-gfE-dCba"
-    result2 = sol.reverseOnly
+    result2 = sol.reverseOnlyLetters(s2)
+    print("Test case 2:")
+    print("Input:", s2)
+    print("Output:", result2)
+    assert result2 == expected2, f"Failed test case 2: expected {expected2}, got {result2}"
+    print("Passed ✅\n")
+
+    # Test case 3
+    s3 = "Test1ng-Leet=code-Q!"
+    expected3 = "Qedo1ct-eeLg=ntse-T!"
+    result3 = sol.reverseOnlyLetters(s3)
+    print("Test case 3:")
+    print("Input:", s3)
+    print("Output:", result3)
+    assert result3 == expected3, f"Failed test case 3: expected {expected3}, got {result3}"
+    print("Passed ✅\n")
+
+
+if __name__ == "__main__":
+    main()
